@@ -1,5 +1,7 @@
 package ticTacToe;
 
+import java.util.Objects;
+
 public class Coordinates {
     private int row;
     private int col;
@@ -31,5 +33,10 @@ public class Coordinates {
         }
 
         return false;
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(this.row, this.col);
     }
 }
